@@ -1,0 +1,179 @@
+/* Tam ekran koyu mavi arka plan */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh; /* ✅ scroll edilebilirlik için height yerine min-height */
+  width: 100vw;
+  background-color: #003366;
+  margin: 0;
+  padding: 0 10%;
+  overflow: visible; /* ✅ hidden yerine visible */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Home İçeriğini Daha İyi Hizala */
+.home-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* İçeriği dikey olarak hizala */
+  align-items: flex-start; /* Sol hizalama */
+  width: 500px; /* İçeriğin genişliğini sabit tut */
+  gap: 15px; /* Yazılar arasındaki boşluğu artır */
+  transform: translateY(-30px); /* İçeriği yukarı taşı */
+}
+
+/* Tüm yazılar BEYAZ olacak ve hover ile açık maviye geçiş yapacak */
+.home-title,
+.home-subtitle,
+.home-description {
+  font-family: 'Inter', sans-serif !important;
+  color: #ffffff !important; /* Beyaz yazı */
+  transition: color 0.3s ease-in-out; /* Renk değişimi animasyonu */
+}
+
+/* Hover'da beyazdan açık maviye geçiş */
+.home-title:hover,
+.home-subtitle:hover,
+.home-description:hover {
+  color: #a3d2ff !important; /* Açık mavi */
+}
+
+/* Başlıklar */
+/* Animasyon: Sol taraftan ortaya kayarak giriş */
+@keyframes futuristicSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw); /* Ekranın tamamen solundan başlasın */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MEGE Mühendislik başlığını yukarı ortala ve animasyon ekle */
+.home-title {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif !important;
+  color: #ffffff !important;
+  text-align: center;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+}
+
+/* Hover'da hafif parlama efekti */
+.home-title:hover {
+  color: #a3d2ff !important;
+  text-shadow: 0 0 10px rgba(163, 210, 255, 0.8);
+}
+
+.home-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin-bottom: -9px;
+}
+
+.home-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 35px 0;
+}
+
+/* Butonları Düzgün Hizala */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Alt alta sıralar */
+  width: 100%; /* Butonları içerik genişliğine uygun yap */
+  align-items: flex-start; /* Sol hizalama */
+  gap: 15px; /* Butonlar arasındaki boşluk */
+  transform: translateY(-30px); /* Butonları yukarı taşıdım */
+}
+
+/* 🔹 **Butonları Yazıyla Aynı Genişlikte Yap** */
+.home-button {
+  width: 80%; /* İçeriğin genişliği kadar butonları hizala */
+  max-width: 500px; /* En fazla içeriğin genişliği kadar genişlesin */
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-color: #2196f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Buton Hover Efekti */
+.home-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #2196f3, 0 0 30px #1a237e;
+}
+
+/* Sağ tarafta logo */
+.home-image {
+  max-width: 600px; /* Logo biraz daha büyük */
+  height: auto;
+  margin-left: 50px; /* Logo ile yazılar arasında boşluk bırak */
+  margin-top: -60px; /* Logoyu yukarı taşıdım */
+  transition: transform 0.3s ease-in-out; /* Hover efekti */
+}
+
+/* Logoya hover efekti - büyüme */
+.home-image:hover {
+  transform: scale(1.4);
+}
+
+/* Aşağı İn Butonu */
+.scroll-down {
+  position: absolute;
+  bottom: 14%; /* Yüksekliği biraz yukarı aldım */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; /* Üstte yazı, altta ikon */
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover efekti */
+.scroll-down:hover {
+  opacity: 0.7;
+}
+
+/* "Aşağı İn" Yazısı */
+.scroll-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #a3d2ff;
+  margin-bottom: 2px; /* Yazıyı ikonun üstüne aldım */
+  text-align: center;
+}
+
+/* Material Icons Mouse */
+.mouse-icon {
+  font-size: 2.4rem; /* İkon boyutunu büyüttüm */
+  color: #a3d2ff; /* Açık mavi renk */
+  animation: bounce 1.5s infinite alternate ease-in-out;
+}
+
+/* Mouse İkonuna Animasyon */
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}

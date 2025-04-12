@@ -1,0 +1,118 @@
+/* 📌 Projeler Sayfası Genel Stil */
+.projects-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  width: 100%;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* 📌 Kart - Boyut Büyütüldü */
+.projects-card {
+  background-color: #003366;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 700px; /* Kartın genişliği artırıldı */
+  width: 90%;
+  padding: 50px 40px; /* İç boşluklar artırıldı */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* 📌 Logo */
+.projects-logo {
+  width: 180px; /* Logo biraz büyütüldü */
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects-logo:hover {
+  transform: scale(1.2);
+}
+
+/* 📌 Başlık */
+.projects-card h2 {
+  font-size: 2.4rem; /* Başlık daha büyük */
+  color: #ffffff;
+  margin: 25px 0;
+  font-weight: bold;
+}
+
+/* 📌 Açıklama */
+.projects-card p {
+  font-size: 1.2rem; /* Açıklama yazıları büyütüldü */
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* 📌 Beyaz Yazıları Vurgula */
+.projects-card strong {
+  color: white;
+  font-weight: bold;
+}
+
+/* 📌 Buton Konteyneri */
+.projects-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* 📌 Buton - Daha Modern ve Geniş */
+.projects-button {
+  background: linear-gradient(to right, #4a90e2, #6aaffe);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 20px rgba(74, 144, 226, 0.5);
+  text-align: center;
+  display: inline-block;
+}
+
+/* 📌 Butona Hover Efekti */
+.projects-button:hover {
+  background: linear-gradient(to right, #5ca0f2, #7acfff);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.7);
+}
+
+/* 📌 Butonu Aktif Hale Getir */
+.projects-button:focus,
+.projects-button:active {
+  outline: none;
+  transform: translateY(0);
+}
+
+/* 📌 Responsive (Mobil Uyum) */
+@media screen and (max-width: 768px) {
+  .projects-card {
+    width: 95%;
+    padding: 40px 30px;
+  }
+
+  .projects-card h2 {
+    font-size: 2rem;
+  }
+
+  .projects-card p {
+    font-size: 1.1rem;
+  }
+
+  .projects-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}

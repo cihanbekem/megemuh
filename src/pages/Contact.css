@@ -1,0 +1,255 @@
+/* Reset margin ve padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Arkaplan */
+.contact-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+  background-color: #003366;
+  margin-top: 0;
+}
+
+/* Harita Kısmındaki Tüm Yazıları Beyaz Yap */
+.contact-left h2,
+.contact-left h3,
+.contact-left p,
+.contact-left span,
+.contact-left a {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+/* İçerideki tüm metinlerin rengini zorunlu beyaz yap */
+.contact-left * {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+/* Logo */
+.contact-logo {
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 220px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.25);
+}
+
+/* İçerik */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  width: 85%;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+/* Sol Taraf */
+.contact-left {
+  flex: 1;
+  padding: 20px;
+  background-color: #0a69c7;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.contact-left h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Harita Konteyneri */
+.map-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Sağdaki Form Kartı */
+.contact-right {
+  flex: 1;
+  padding: 20px;
+  min-height: 500px;
+  background-color: #ffffff !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sağdaki Başlık */
+.contact-right h2 {
+  margin-bottom: 20px;
+  color: #003366;
+  text-align: center;
+  width: 100%;
+}
+
+/* İletişim ve Form Kartlarına Hover Efekti */
+.contact-left, .contact-right {
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-left:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #2196f3 !important;
+}
+
+.contact-right:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #2196f3 !important;
+}
+
+/* Genel Sayfa Yazı Tipi */
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* 🔹 Form Genel Yapısı */
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Form Grupları */
+.form-group {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Etiketler */
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* 📌 **Metin Kutularının Yanlara Doğru Genişlemesi** */
+.form-group input,
+.form-group textarea {
+  width: 125%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+}
+
+/* 📌 **Mesaj Kutusunun Yüksekliği Artırıldı** */
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* 📌 **Buton, Textbox'larla Aynı Genişlikte ve Ortalanmış** */
+button[type="submit"] {
+  width: 95%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #0454aa;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-top: 10px;
+}
+
+/* 📌 **Alt Bilgi Çizgisi ve Yazısı */
+.bottom-text-container {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #003366;
+  z-index: 10;
+}
+
+.bottom-text-line {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bottom-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+/* İletişim bilgileri listesi */
+.contact-info-list {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.contact-info-list li {
+  margin-bottom: 8px;
+}
+
+/* 📌 **Mobil ve Küçük Ekran Uyumlu** */
+@media (max-width: 768px) {
+  .contact-right {
+    width: 90%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}

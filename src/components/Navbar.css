@@ -1,0 +1,92 @@
+/* 📌 Varsayılan margin ve padding sıfırlama */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #003366;
+  color: #ffffff;
+  height: 80px; /* Yüksekliği koruyun */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Navbar'ı sabit tutar */
+  top: 0; /* Üstte sabit kalması için */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Diğer içeriklerin üstünde görünsün */
+}
+
+.navbar.hidden {
+  transform: translateY(-100%); /* Yukarı kaydır */
+}
+
+.navbar.visible {
+  transform: translateY(0); /* Normal konumda */
+}
+
+/* 📌 Navbar İçeriği */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📌 Navbar ile çakışmayı önlemek için üst boşluk ekleyelim */
+body {
+  padding-top: 80px; /* 🔹 Navbar yüksekliği kadar boşluk ekleyelim */
+}
+
+/* 📌 Navbar içindeki logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-image {
+  height: 60px; /* 🔹 Logonun navbar içinde düzgün görünmesi için küçültüldü */
+  width: auto;
+}
+
+.logo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+/* 📌 Navbar Bağlantıları */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}

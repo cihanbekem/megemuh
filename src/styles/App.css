@@ -1,0 +1,122 @@
+/* Genel Ayarlar */
+html, body, #root, .app {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 200vh !important; /* Scroll zorla gelsin */
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #003366; /* Logonun mavisi */
+  color: #ffffff; /* Beyaz metin */
+  padding: 0px 0; /* Üst ve alt boşluk */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky !important; /* Sayfayı aşağı kaydırırken navbar sabit kalır */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0; /* Boşlukları kaldır */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px; /* İçerik genişliğini sınırlamak için */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px; /* Logo yüksekliği */
+  width: auto; /* Oranları korur */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #ffffff; /* Beyaz logo metni */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff; /* Beyaz yazı */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4; /* Hover rengi */
+}
+
+/* Bölümler */
+.section {
+  height: 100vh; /* Her bölüm tam ekran yüksekliğinde */
+  padding: 0; /* Boşluğu tamamen kaldırmak için */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f9; /* Bölüm için nötr arka plan */
+  border-bottom: 1px solid #ccc; /* Alt bölümleri ayırmak için ince çizgi */
+}
+
+.section h1 {
+  font-size: 2.5rem;
+  color: #003366; /* Koyu mavi başlık */
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+.section p {
+  font-size: 1.2rem;
+  color: #555555; /* Hafif koyu metin */
+  max-width: 800px; /* Yazının genişliğini sınırlandır */
+  line-height: 1.8; /* Paragraflar için daha fazla satır aralığı */
+}
+
+
+/* Bölümlere Özel Renkler */
+#services {
+  background-color: #f0f8ff; /* Hafif mavi */
+}
+
+#about {
+  background-color: #e6f7ff; /* Daha açık mavi */
+}
+
+#projects {
+  background-color: #f0f0f0; /* Nötr gri */
+}
+
+/* 📌 Galeri Bölümü İçin Yeni Arkaplan */
+#gallery {
+  background-color: #ffffff; /* Beyaz arka plan */
+}
+
+#contact {
+  background-color: #ffffff; /* Beyaz arka plan */
+}
